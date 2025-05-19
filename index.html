@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brosur Pendaftaran Sekolah</title>
+  <style>
+    :root {
+      --primary-color: #002244;
+      --accent-color: #0099ff;
+      --background-light: #f2f7fb;
+      --text-color: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--background-light);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 2em 1em 1em;
+      text-align: center;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 0.8em 1em;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.4em 0.8em;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--accent-color);
+      color: white;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #cce5ff, #e6f0ff);
+      padding: 3em 1em;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 200px;
+      border-radius: 10px;
+      margin-bottom: 1em;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .highlight {
+      font-size: 1.2em;
+      color: #e60000;
+      font-weight: bold;
+      margin-top: 0.5em;
+    }
+
+    .section {
+      padding: 3em 1em;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      margin-top: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      color: var(--primary-color);
+      margin-bottom: 1em;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 1.5em;
+      padding: 0.8em 1.6em;
+      background-color: var(--accent-color);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background-color: #007acc;
+    }
+
+    form {
+      margin-top: 2em;
+      background-color: #eef5ff;
+      padding: 1.5em;
+      border-radius: 8px;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 0.6em;
+      margin-bottom: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #struk {
+      margin-top: 2em;
+      padding: 1em;
+      background-color: #e0ffe0;
+      border: 1px dashed #008000;
+      display: none;
+    }
+
+    footer {
+      margin-top: 3em;
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 1.5em 1em;
+    }
+
+    a {
+      color: var(--accent-color);
+    }
+
+    .program-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1em;
+      margin-top: 2em;
+    }
+
+    .program-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    ul li p {
+      margin: 0.5em 0 1em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SMK BINA INFORMATIKA</h1>
+</header>
+
+<nav>
+  <a href="#beranda">Beranda</a>
+  <a href="#keunggulan">Keunggulan</a>
+  <a href="#program">Program</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+<section class="hero" id="beranda">
+  <img src="logo.JPG" alt="logo.JPG">
+  <h2>Pendaftaran Peserta Didik Baru 2025/2026</h2>
+  <p class="highlight">GRATIS DSP untuk 100 Pendaftar Pertama!</p>
+  <a href="#form-daftar" class="cta-button" onclick="tampilkanForm()">Daftar Sekarang</a>
+</section>
+
+<section class="section" id="keunggulan">
+  <h2>Keunggulan Sekolah Kami</h2>
+  <ul>
+    <li>Guru profesional & berpengalaman</li>
+    <li>Fasilitas belajar modern & lengkap</li>
+    <li>Kegiatan ekstrakurikuler yang beragam</li>
+    <li>Lingkungan aman dan Islami</li>
+  </ul>
+</section>
+
+<section class="section" id="program">
+  <h2>Program Keahlian</h2>
+
+  <div class="jurusan">
+    <h3>Rekayasa Perangkat Lunak (RPL)</h3>
+    <p>Jurusan RPL mempelajari tentang pembuatan aplikasi, pengembangan perangkat lunak, coding, desain antarmuka, serta pengujian dan pemeliharaan program. Cocok bagi siswa yang tertarik dengan dunia teknologi dan pemrograman.</p>
+    <img src="foto-rpl.jpg" alt="Kegiatan RPL" style="width:100%; border-radius: 8px; margin-top: 1em;">
+  </div>
+
+  <div class="jurusan">
+    <h3>Teknik Komputer dan Jaringan (TKJ)</h3>
+    <p>Jurusan TKJ fokus pada perakitan komputer, instalasi jaringan LAN/WAN, perawatan perangkat keras dan jaringan, serta konfigurasi perangkat jaringan. Cocok bagi siswa yang tertarik dengan dunia jaringan dan perangkat keras.</p>
+    <img src="foto-tkj.jpg" alt="Kegiatan TKJ" style="width:100%; border-radius: 8px; margin-top: 1em;">
+  </div>
+
+  <div class="jurusan">
+    <h3>Multimedia (MM)</h3>
+    <p>Jurusan Multimedia mempelajari desain grafis, animasi, editing video dan audio, serta produksi konten digital. Cocok untuk siswa yang suka berkreasi secara visual dan ingin bekerja di industri kreatif.</p>
+    <img src="foto-mm.jpg" alt="Kegiatan Multimedia" style="width:100%; border-radius: 8px; margin-top: 1em;">
+  </div>
+
+  <div class="jurusan">
+    <h3>Otomatisasi dan Tata Kelola Perkantoran (OTKP)</h3>
+    <p>Jurusan OTKP mempelajari administrasi perkantoran, pengelolaan dokumen, layanan pelanggan, serta penggunaan perangkat lunak perkantoran. Cocok bagi siswa yang tertarik pada dunia administrasi dan tata kelola bisnis.</p>
+    <img src="foto-otkp.jpg" alt="Kegiatan OTKP" style="width:100%; border-radius: 8px; margin-top: 1em;">
+  </div>
+
+  <div class="jurusan">
+    <h3>Perbankan dan Keuangan Makro (PKM)</h3>
+    <p>Jurusan PKM mempelajari dasar-dasar akuntansi, perbankan, keuangan mikro dan makro, serta manajemen keuangan. Sangat cocok untuk siswa yang berminat bekerja di dunia keuangan atau perbankan.</p>
+    <img src="foto-pkm.jpg" alt="Kegiatan PKM" style="width:100%; border-radius: 8px; margin-top: 1em;">
+  </div>
+</section>
+<section class="section" id="form-daftar">
+  <h2>Formulir Pendaftaran</h2>
+  <form id="daftarForm" onsubmit="kirimForm(event)">
+    <input type="text" id="nama" placeholder="Nama Lengkap" required />
+    <input type="text" id="nisn" placeholder="NISN" required />
+    <input type="date" id="tglLahir" required />
+    
+    <select id="jenisKelamin" required>
+      <option value="" disabled selected>Pilih Jenis Kelamin</option>
+      <option value="Laki-laki">Laki-laki</option>
+      <option value="Perempuan">Perempuan</option>
+    </select>
+
+    <select id="jurusan" required>
+      <option value="" disabled selected>Pilih Jurusan</option>
+      <option value="RPL">Rekayasa Perangkat Lunak</option>
+      <option value="TKJ">Teknik Komputer dan Jaringan</option>
+      <option value="MM">Multimedia</option>
+      <option value="OTKP">Otomatisasi dan Tata Kelola Perkantoran</option>
+      <option value="PKM">Perbankan dan Keuangan Makro</option>
+    </select>
+    
+    <button type="submit" class="cta-button">Kirim Pendaftaran</button>
+  </form>
+
+  <div id="struk">
+    <h3>Struk Pendaftaran</h3>
+    <p><strong>Nama:</strong> <span id="outNama"></span></p>
+    <p><strong>NISN:</strong> <span id="outNISN"></span></p>
+    <p><strong>Tanggal Lahir:</strong> <span id="outTglLahir"></span></p>
+    <p><strong>Jenis Kelamin:</strong> <span id="outJK"></span></p>
+    <p><strong>Jurusan:</strong> <span id="outJurusan"></span></p>
+    <p><strong>Tanggal Pendaftaran:</strong> <span id="outTglDaftar"></span></p>
+    <p><em>Terima kasih telah mendaftar di SMK Bina Informatika!</em></p>
+    <button onclick="window.print()" class="cta-button">Cetak Struk</button>
+  </div>
+</section>
+
+<section class="section" id="kontak">
+  <h2>Informasi & Pendaftaran</h2>
+  <a href="https://wa.me/6289617354862?text=Halo, saya sudah mendaftar ke SMK Bina Informatika " target="_blank" class="custom-antrian text-decoration-none">
+        {089617354862}</a>
+        
+  <p><strong>Email:</strong> <a href="mailto:smkbinainformatikabogor@gmail.com">smkbifor@gmail.com</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 SMK Bina Informatika. Yomi🎀.</p>
+</footer>
+
+<script>
+  function tampilkanForm() {
+    document.getElementById("form-daftar").scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      document.getElementById("nama").focus();
+    }, 500);
+  }
+
+  function kirimForm(e) {
+    e.preventDefault();
+    const nama = document.getElementById("nama").value;
+    const nisn = document.getElementById("nisn").value;
+    const tglLahir = document.getElementById("tglLahir").value;
+    const jenisKelamin = document.getElementById("jenisKelamin").value;
+    const jurusan = document.getElementById("jurusan").value;
+
+    const today = new Date();
+    const tanggalPendaftaran = today.toLocaleDateString('id-ID', {
+      day: '2-digit', month: 'long', year: 'numeric'
+    });
+
+    document.getElementById("outNama").textContent = nama;
+    document.getElementById("outNISN").textContent = nisn;
+    document.getElementById("outTglLahir").textContent = tglLahir;
+    document.getElementById("outJK").textContent = jenisKelamin;
+    document.getElementById("outJurusan").textContent = jurusan;
+    document.getElementById("outTglDaftar").textContent = tanggalPendaftaran;
+
+    document.getElementById("daftarForm").style.display = "none";
+    document.getElementById("struk").style.display = "block";
+    document.getElementById("struk").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+</body>
+</html>
